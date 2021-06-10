@@ -18,14 +18,13 @@ import dagger.hilt.android.AndroidEntryPoint
 import org.apache.poi.hpsf.Util
 import ru.wood.cuber.databinding.ActivityMainBinding
 import ru.wood.cuber.utill.Utill
-//Ramires//
-//Ramires
+//Ramires !!!!!!!!!!!!!!!!!!!//
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     val observableField =ObservableField<Boolean> ()
     lateinit var splashScreen: RelativeLayout
-    var navController: NavController? = null
     private lateinit var appBarConfiguration: AppBarConfiguration
+    var navController: NavController? = null
 
     fun initLengths (){
         for (x in 60 downTo 30){
