@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/myCalculationsFragment">
+
+    <fragment
+        android:id="@+id/containersFragment"
+        android:name="ru.wood.cuber.ui.ContainFragment"
+        android:label="fragment_containers"
+        tools:layout="@layout/fragment_contain" >
+        <action
+            android:id="@+id/action_containersFragment_to_treesFragment"
+            app:destination="@id/treesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/treesFragment"
+        android:name="ru.wood.cuber.ui.TreesFragment"
+        android:label="fragment_trees"
+        tools:layout="@layout/fragment_trees" >
+        <action
+            android:id="@+id/action_treesFragment_to_treeRedactFragment"
+            app:destination="@id/treeRedactFragment" />
+        <action
+            android:id="@+id/action_treesFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+        <action
+            android:id="@+id/action_treesFragment_to_containerRedactFragment"
+            app:destination="@id/containerRedactFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myCalculationsFragment"
+        android:name="ru.wood.cuber.ui.MyOrderFragment"
+        android:label="MyCalculationsFragment" >
+        <action
+            android:id="@+id/action_myCalculationsFragment_to_containersFragment"
+            app:destination="@id/containersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/treeRedactFragment"
+        android:name="ru.wood.cuber.ui.TreeRedactFragment"
+        android:label="TreeRedactFragment" />
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="ru.wood.cuber.ui.ResultFragment"
+        android:label="ResultFragment" />
+    <fragment
+        android:id="@+id/containerRedactFragment"
+        android:name="ru.wood.cuber.ui.ContainerRedactFragment"
+        android:label="ContainerRedactFragment" />
+    <fragment
+        android:id="@+id/baseFragment"
+        android:name="ru.wood.cuber.ui.BaseFragment"
+        android:label="fragment_base"
+        tools:layout="@layout/fragment_base" />
+</navigation>

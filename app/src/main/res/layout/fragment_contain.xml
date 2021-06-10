@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="fragment"
+            type="ru.wood.cuber.ui.ContainFragment" />
+    </data>
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.ContainFragment">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:id="@+id/recycler"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:onClick="@{fragment::createNew}"
+            android:layout_margin="15dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:paddingHorizontal="@dimen/margin_min"
+            android:drawableLeft="@drawable/ic_plus"
+            android:text="Создать"
+            android:textColor="@color/white"
+            android:shadowColor="@color/black"
+            android:translationZ="5dp"
+            android:elevation="5dp"
+            android:layout_width="139dp"
+            android:layout_height="48dp"
+            android:background="@drawable/background_green_corners"
+            />
+    </FrameLayout>
+</layout>

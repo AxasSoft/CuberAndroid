@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="entity"
+            type="ru.wood.cuber.data.MyOrder" />
+    </data>
+    <com.daimajia.swipe.SwipeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:id="@+id/swipe"
+        app:leftEdgeSwipeOffset="0dp"
+        app:rightEdgeSwipeOffset="0dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/bottom_wraper"
+            android:layout_width="wrap_content"
+            android:weightSum="3"
+            android:orientation="horizontal"
+            android:layout_height="match_parent"
+            android:background="@color/gray_dark">
+
+            <ImageButton
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_close"
+                android:id="@+id/Delete"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_width="100dp"/>
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/item_order"/>
+    </com.daimajia.swipe.SwipeLayout>
+
+</layout>

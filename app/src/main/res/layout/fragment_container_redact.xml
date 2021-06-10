@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="fragment"
+            type="ru.wood.cuber.ui.ContainerRedactFragment" />
+    </data>
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.TreeRedactFragment"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_marginTop="@dimen/margin_normal"
+            android:layout_marginLeft="45dp"
+            android:layout_gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/green_second"
+            android:text="№ контейнера"/>
+
+        <EditText
+            android:onTextChanged="@{fragment::containNameChange}"
+            android:id="@+id/name_tv"
+            android:paddingHorizontal="@dimen/margin_normal"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/background_gray_corners"
+            android:layout_width="328dp"
+            android:layout_height="56dp"/>
+        <View
+            android:layout_width="328dp"
+            android:layout_height="2dp"
+            android:background="@color/green_second"/>
+
+        <TextView
+            android:layout_marginTop="@dimen/margin_normal"
+            android:layout_marginLeft="45dp"
+            android:layout_gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/green_second"
+            android:text="Вес тары"/>
+
+        <EditText
+            android:inputType="number"
+            android:onTextChanged="@{fragment::weightChange}"
+            android:id="@+id/weight_tv"
+            android:paddingHorizontal="@dimen/margin_normal"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/background_gray_corners"
+            android:layout_width="328dp"
+            android:layout_height="56dp"/>
+        <View
+            android:layout_width="328dp"
+            android:layout_height="2dp"
+            android:background="@color/green_second"/>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:background="@color/green_first"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+</layout>

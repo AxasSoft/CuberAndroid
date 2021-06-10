@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="entity"
+            type="ru.wood.cuber.data.TreePosition" />
+    </data>
+    <FrameLayout
+        android:clickable="true"
+        android:focusable="true"
+        android:id="@+id/clicable_layout"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/margin_min"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_marginBottom="@dimen/margin_min"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="@{String.valueOf(entity.length)}"
+                android:hint="length"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/length"/>
+            <TextView
+                android:text="@{String.valueOf(entity.quantity)}"
+                android:hint="quantity"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/quantity"/>
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/volume"/>
+        </LinearLayout>
+        <View
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_light"/>
+    </FrameLayout>
+</layout>
